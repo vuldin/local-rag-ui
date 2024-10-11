@@ -1,5 +1,10 @@
-Prerequisites:
+This repo shows how you can set up a RAG pipeline with locally-hosted, open LLMs.
+
+The chatbot is an expert in potty training. 
+
+**Prerequisites:**
 To install ollama and models, visit https://ollama.com/
+
 To install and run qdrant locally, visit https://qdrant.tech/documentation/quickstart/
 
 To start qdrant:
