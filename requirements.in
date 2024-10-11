@@ -1,0 +1,14 @@
+html2text
+bs4
+tqdm
+asyncio
+langchain
+fastapi
+langchain-community
+ollama
+langchain-core
+langchain-qdrant
+langchain-ollama
+pydantic
+typing
+qdrant-client
