@@ -1,3 +1,7 @@
+sse_starlette
+uvicorn 
+langserve
+streamlit
 html2text
 bs4
 tqdm

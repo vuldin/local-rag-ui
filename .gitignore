@@ -1,3 +1,4 @@
+__pycache__
 local_rag
 .DS_Store
 qdrant_storage
