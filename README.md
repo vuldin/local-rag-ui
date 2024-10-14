@@ -20,6 +20,9 @@ To start **qdrant**:
 To check if it's running:
 navigate to localhost:6333/dashboard in a browser
 
+To generate the **data**:
+Run test_servers.ipynb to create your Qdrant collection and verify that your models and vector store are working.
+
 To start **FastAPI**:
 'uvicorn server:app --host 0.0.0.0 --port 8000'
 
@@ -32,7 +35,7 @@ And send a test query:
 Or, for streaming:
 'curl -X POST "http://localhost:8000/stream" -H "Content-Type: application/json" -d '{"input": {"query": "Your question here"}}''
 
-To run a test app with a very simple interactive **Streamlit** experience:
+To run **Streamlit** as a simple test app:
 Make sure all the stuff above is running.
 In your shell, do 'streamlit run streamlit_app.py' and interact with the chatbot via the browser!
 
