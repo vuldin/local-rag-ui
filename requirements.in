@@ -4,6 +4,7 @@ langserve
 streamlit
 html2text
 bs4
+lxml
 tqdm
 asyncio
 langchain
