@@ -1,4 +1,4 @@
-This repo shows how you can set up a RAG pipeline with locally-hosted, open LLMs.
+This repo shows how you can set up a RAG pipeline with locally-hosted, open LLMs!
 
 The chatbot is an expert in potty training. This may seem silly to those who have never potty trained a small child, but as a first time parent, I would have loved a helpful chatbot on this topic!
 
