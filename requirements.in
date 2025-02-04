@@ -1,5 +1,5 @@
 sse_starlette
-uvicorn 
+uvicorn
 langserve
 streamlit
 html2text

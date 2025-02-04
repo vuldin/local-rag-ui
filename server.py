@@ -18,13 +18,13 @@ from langchain_qdrant import QdrantVectorStore
 app = FastAPI()
 
 # llm
-model = "llama3.2:1b"
+model = "llama3.2"
 llm = OllamaLLM(model=model)
 
 # prompt
 RAG_PROMPT_TEMPLATE = """\
 <|start_header_id|>system<|end_header_id|>
-You are a helpful potty training assistant. You answer user questions based on context. If you can't answer the question with the context, say you don't know.
+You are a helpful assistant. You answer user questions based on context. If you can't answer the question with the context, say you don't know.
 Context:
 {context}
 <|eot_id|>
@@ -39,11 +39,12 @@ User Question:
 rag_prompt = PromptTemplate.from_template(RAG_PROMPT_TEMPLATE)
 
 # vector store
-url="http://localhost:6333"
-collection_name="PottyTraining"
+url="http://qdrant:6333"
+collection_name="court-cases"
 
 embeddings = OllamaEmbeddings(
-    model="mxbai-embed-large",
+    #model="pankajrajdeo/sentence-transformers_all-minilm-l6-v2",
+    model="nomic-embed-text",
 )
 qdrant_vector_store = QdrantVectorStore.from_existing_collection(
     embedding=embeddings,
@@ -54,8 +55,8 @@ qdrant_vector_store = QdrantVectorStore.from_existing_collection(
 
 # retriever
 retriever = qdrant_vector_store.as_retriever(
-    search_type="mmr",  
-    search_kwargs={"k": 3}    
+    search_type="mmr",
+    search_kwargs={"k": 3}
 )
 
 # rag chain
@@ -71,7 +72,7 @@ async def redirect_root_to_docs():
 add_routes(
     app, 
     lcel_rag_chain.with_types(input_type=Input, output_type=str).with_config(
-        {"run_name" : "PottyTraining_RAG"}
+        {"run_name" : "court-cases_RAG"}
     )
 )
 
