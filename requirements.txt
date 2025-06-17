@@ -188,7 +188,7 @@ portalocker==2.10.1
     # via qdrant-client
 propcache==0.2.0
     # via yarl
-protobuf==5.28.2
+protobuf==5.29.5
     # via
     #   grpcio-tools
     #   streamlit
@@ -310,6 +310,8 @@ uvicorn==0.31.1
     # via
     #   -r requirements.in
     #   sse-starlette
+watchdog==5.0.3
+    # via streamlit
 yarl==1.14.0
     # via aiohttp
 
