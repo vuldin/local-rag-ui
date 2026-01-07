@@ -145,7 +145,7 @@ markdown-it-py==3.0.0
     # via rich
 markupsafe==3.0.1
     # via jinja2
-marshmallow==3.22.0
+marshmallow==3.26.2
     # via dataclasses-json
 mdurl==0.1.2
     # via markdown-it-py
@@ -310,6 +310,8 @@ uvicorn==0.31.1
     # via
     #   -r requirements.in
     #   sse-starlette
+watchdog==5.0.3
+    # via streamlit
 yarl==1.14.0
     # via aiohttp
 
